@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  mongo:
+    image: mongo:7
+    container_name: workspace_mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
