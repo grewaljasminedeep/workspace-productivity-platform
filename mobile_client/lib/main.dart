@@ -25,7 +25,10 @@ class HomeScreen extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-            
-        )
+            appBar: AppBar(title: const Text('Workspace Dashboard')),
+            body: const Center(
+                child: Text('Kanban boards, projects, and activity stream go here.').
+            ),
+        );
     }
 }
