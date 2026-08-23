@@ -26,6 +26,15 @@ public class TaskItem {
         return projectId;
     }
     public void setProjectId(String projectId) {
-        
+        this.projectId = projectId;
+    }
+    public String getTitle() {
+        return title;
+    }
+    public void setTitle(String title) {
+        this.title = title;
+    }
+    public String getDescription() {
+        return description;
     }
 }
