@@ -16,6 +16,11 @@ public class ProjectController {
 
     @GetMapping
     public List<Project> all() {
-        
+        return projectRepository.findAll();
+    }
+
+    @PostMapping
+    public Project create(@RequestBody Project project) {
+        return projectRepository.save(project);
     }
 }
