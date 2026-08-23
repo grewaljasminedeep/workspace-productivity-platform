@@ -7,4 +7,15 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/projects")
-public class ProjectController {}
+public class ProjectController {
+    private final ProjectRepository projectRepository;
+
+    public ProjectController(ProjectRepository projectRepository) {
+        this.projectRepository = projectRepository;
+    }
+
+    @GetMapping
+    public List<Project> all() {
+        
+    }
+}
