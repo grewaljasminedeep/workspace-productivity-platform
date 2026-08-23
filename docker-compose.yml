@@ -18,3 +18,13 @@ services:
     build: 
       context: ./backend
     container_name: workspace_backend
+    restart: unless-stopped
+    depends_on:
+      - mongo
+    ports:
+      - "8080:80080"
+    environment:
+      SPRING_DATA_MONGODB_URI: mongodb://admin:adminpass@mongo:27017/workspace_db?authSource=admin
+      JWT_SECRET: JasmineSecretKey
+      JWT_EXPIRATION_MS: 86400000
+      
