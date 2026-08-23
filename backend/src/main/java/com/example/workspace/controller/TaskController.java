@@ -17,4 +17,14 @@ public class TaskController {
     }
 
 @GetMapping("/project/{projectId}")
+    public List<TaskItem> byProject(@PathVariable String projectId) {
+        return taskRepository.findByProjectId(projectId);
+    }
+
+    @PostMapping
+    public TaskItem create(@RequestBody TaskItem task) {
+        task.setCreatedAt(Instant.now());
+            if (task.getStatus() == null)
+                task.setStatus(TaskStatus.BACKLOG);
+    }
 }
