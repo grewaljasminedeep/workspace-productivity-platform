@@ -8,3 +8,5 @@ spring:
 
 app:
   jwt:
+    secret: ${JWT_SECRET:JasmineSecretKey}
+    expiration-ms: ${JWT_EXPIRATION_MS:86400000}
