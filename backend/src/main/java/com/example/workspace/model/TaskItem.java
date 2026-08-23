@@ -16,5 +16,16 @@ public class TaskItem {
     private List<String> tags;
     private Instant createdAt;
 
-    public String getId() {}
+    public String getId() {
+        return id;
+    }
+    public void setId(String id) {
+        this.id = id;
+    }
+    public String getProjectId() {
+        return projectId;
+    }
+    public void setProjectId(String projectId) {
+        
+    }
 }
