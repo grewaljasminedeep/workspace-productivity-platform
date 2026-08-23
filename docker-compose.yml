@@ -27,4 +27,6 @@ services:
       SPRING_DATA_MONGODB_URI: mongodb://admin:adminpass@mongo:27017/workspace_db?authSource=admin
       JWT_SECRET: JasmineSecretKey
       JWT_EXPIRATION_MS: 86400000
-      
+
+volumes:
+  mongo_data:
