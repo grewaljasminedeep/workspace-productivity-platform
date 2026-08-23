@@ -26,5 +26,13 @@ public class TaskController {
         task.setCreatedAt(Instant.now());
             if (task.getStatus() == null)
                 task.setStatus(TaskStatus.BACKLOG);
+            return taskRepository.save(task);
+    }
+
+    @PatchMapping("/{id}/status")
+    public TaskItem updateStatus(@PathVariable String id, @RequestParam TaskStatus status) {
+        TaskItem task = taskRepository.findById(id).orElseThrow();
+        task.setStatus(status);
+        return taskRepository.save(task);
     }
 }
