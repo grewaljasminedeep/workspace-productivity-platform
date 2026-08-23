@@ -6,5 +6,15 @@ void main() {
 
 class WorkspaceApp extends StatelessWidget {
     const WorkspaceApp({super.key});
-    
+
+    @override
+    Widget build(BuildContext context) {
+        return MaterialApp(
+            title: 'Workspace',
+            theme: ThemeData(useMaterial3: true,
+            colorSchemeSeed: Colors.indigo),
+            home: const HomeScreen(),
+            debugShowCheckedModeBanner: false,
+        );
+    }
 }
