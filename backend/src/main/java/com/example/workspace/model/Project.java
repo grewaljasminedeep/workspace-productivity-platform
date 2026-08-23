@@ -27,4 +27,13 @@ public class Project {
     public String getDescription() {
         return description;
     }
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    public List<String> getMemberIds() {
+        return memberIds;
+    }
+    public void setMemberIds(List<String> memberIds) {
+        this.memberIds = memberIds;
+    }
 }
