@@ -37,4 +37,14 @@ public class TaskItem {
     public String getDescription() {
         return description;
     }
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    public TaskStatus getStatus() {
+        return status;
+    }
+    public void setStatus(TaskStatus status) {
+        this.status = status;
+    }
+    public List<String> getTags() {}
 }
