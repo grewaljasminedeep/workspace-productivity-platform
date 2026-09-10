@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'features/kanban/kanban_board.dart';
 
 void main() {
     runApp(const WorkspaceApp());
@@ -13,7 +14,10 @@ class WorkspaceApp extends StatelessWidget {
             title: 'Workspace',
             theme: ThemeData(useMaterial3: true,
             colorSchemeSeed: Colors.indigo),
-            home: const HomeScreen(),
+            home: const Scaffold(
+                appBar: AppBar(title: Text('Workspace Board')),
+                body: KanbanBoard(),
+            ),
             debugShowCheckedModeBanner: false,
         );
     }
